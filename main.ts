@@ -12,7 +12,7 @@ namespace simpleText {
         const font = image.getFontForText(text);
         const textImage = image.create(font.charWidth * text.length, font.charHeight);
         if (background) textImage.fill(background);
-        textImage.print("text", 0, 0, foreground, font);
+        textImage.print(text, 0, 0, foreground, font);
 
         return sprites.create(textImage, kind);
     }
